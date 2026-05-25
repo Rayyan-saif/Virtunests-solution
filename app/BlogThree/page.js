@@ -5,7 +5,6 @@ import Image from "next/image";
 import Head from "next/head";
 import AOS from "aos";
 import "aos/dist/aos.css";
-// import blogImage from "@/assets";
 
 export default function BlogThree() {
   useEffect(() => {
@@ -14,127 +13,131 @@ export default function BlogThree() {
 
   return (
     <>
-      {/* -------- SEO META TAGS -------- */}
+      {/* SEO */}
       <Head>
         <title>5 Signs Your Business Needs a Website Redesign | Virtunest Solutions</title>
         <meta
           name="description"
-          content="Is your website outdated or not converting? Discover the 5 major signs your business needs a website redesign to boost conversions, speed, and user experience."
+          content="Discover the 5 signs your website needs redesign to boost conversions and user experience."
         />
-        <meta
-          name="keywords"
-          content="website redesign, business website redesign, UI UX improvement, website speed optimization, responsive website, modern web design, website developer Pakistan, redesign services"
-        />
-        <meta property="og:title" content="5 Signs Your Business Needs a Website Redesign" />
-        <meta property="og:description" content="Learn why redesigning your outdated business website can increase conversions, trust, and customer engagement." />
       </Head>
 
-      {/* -------- MAIN SECTION -------- */}
-      <section className="bg-white py-20 px-6 md:px-24">
-        <div className="max-w-5xl mx-auto" data-aos="fade-up">
-          
-          {/* Title */}
-          <h1 className="text-4xl md:text-5xl font-bold text-black font-roboto pt-5 leading-snug text-center mb-4">
-            5 Signs Your Business Needs a Website Redesign
-          </h1>
+      {/* MAIN */}
+      <section className="relative bg-gradient-to-br from-[#0b0f1a] via-[#0d1324] to-[#05070f] text-white py-20 px-6 md:px-20 overflow-hidden">
 
-          {/* Date + Author */}
-          <div className="flex items-center justify-center space-x-4 text-gray-700 text-sm mb-10">
-            <span>📅 July 15, 2024</span>
-            <span>•</span>
-            <span>✍️ By Virtunest Solutions</span>
+        {/* Glow Background */}
+        <div className="absolute w-[500px] h-[500px] bg-blue-600/20 blur-[140px] top-[-120px] left-[-120px]" />
+        <div className="absolute w-[400px] h-[400px] bg-cyan-600/20 blur-[120px] bottom-[-120px] right-[-120px]" />
+
+        <div className="max-w-7xl mx-auto relative z-10">
+
+          {/* Title */}
+          <div className="text-center mb-14" data-aos="fade-up">
+            <h1 className="text-4xl mt-5 md:text-6xl font-extrabold leading-tight bg-gradient-to-r from-blue-400 to-cyan-400 text-transparent bg-clip-text">
+              5 Signs Your Business Needs a Website Redesign
+            </h1>
+
+            <p className="text-gray-400 mt-4 text-sm">
+              📅 July 15, 2024 • ✍️ Virtunest Solutions
+            </p>
           </div>
 
-          <div className="">
+          {/* Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
-            {/* Blog Image */}
-            <div className="overflow-hidden mb-10 lg:w-[40vw] lg:mr-20">
-              <Image
-                src="/website_Recuirment/blog03.jpg"
-                alt="UI-UX-Services"
-                width={900}
-                height={500}
-                className="rounded-3xl object-cover hover:scale-105 transition duration-500"
-            />
+            {/* LEFT - IMAGE */}
+            <div data-aos="zoom-in">
+              <div className="relative overflow-hidden rounded-3xl border border-white/10 shadow-2xl group">
+                <Image
+                  src="/website_Recuirment/blog03.jpg"
+                  alt="Website Redesign"
+                  width={900}
+                  height={600}
+                  className="object-cover w-full h-full group-hover:scale-105 transition duration-700"
+                />
+
+                {/* overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              </div>
             </div>
 
-            {/* Content */}
-            <div className="text-gray-800 text-lg leading-relaxed space-y-6 font-roboto text-balance lg:w-[60vw]">
+            {/* RIGHT - CONTENT */}
+            <div
+              className="space-y-8 text-gray-300 text-[1.05rem] leading-relaxed"
+              data-aos="fade-up"
+            >
 
               <p>
-                A website is more than a digital identity — it is your business’s sales engine, trust-builder, and first impression for potential customers. 
-                If your website feels outdated or is failing to convert, it’s hurting your brand more than you think.
+                Your website isn’t just a page — it’s your digital salesman.
+                If it’s outdated or slow, it’s silently killing your conversions.
               </p>
 
-              <h2 className="text-2xl font-bold">1. Your Website Is Not Mobile-Friendly</h2>
-              <p>
-                Over 60% of global traffic is now mobile. If your website is not fully responsive, loads poorly on phones,
-                or forces users to zoom manually, then you're losing clients instantly.
-                Google also ranks mobile-friendly websites higher — this is a major reason to redesign.
-              </p>
-
-              <h2 className="text-2xl font-bold">2. Slow Load Time Is Affecting Your Sales</h2>
-              <p>
-                Even a **2-second delay** can cause a 40% drop in conversions.  
-                Slow websites frustrate visitors, reduce search ranking, and increase bounce rate.
-                A redesign improves performance, caching, and Core Web Vitals.
-              </p>
-
-              <h2 className="text-2xl font-bold">3. Your Design Looks Outdated</h2>
-              <p>
-                Web design trends evolve fast. If your website still looks like it’s from 2016 — old colors, old layout, low-quality images —
-                customers may assume your business is outdated too.
-                A modern, clean, and premium UI/UX builds immediate trust.
-              </p>
-
-              <h2 className="text-2xl font-bold">4. Visitors Can’t Find What They Need</h2>
-              <p>
-                Bad navigation is a silent sales killer.  
-                If your customers struggle to find your services, pricing, or contact info, they’ll leave within seconds.
-                A redesign improves structure, clarity, and flow — increasing conversions.
-              </p>
-
-              <h2 className="text-2xl font-bold">5. Your Website Isn’t Generating Leads or Sales</h2>
-              <p>
-                If your traffic is high but conversions are low, your website experience is failing.
-                A redesign improves CTAs, layout, trust signals, and overall user behavior.
-                Conversion-focused design = more leads + more revenue.
-              </p>
-
-              <blockquote className="border-l-4 border-blue-700 pl-4 italic text-blue-900 bg-blue-50 py-2 px-4 rounded-xl">
-                "Success in {new Date().getFullYear()} requires more than just being online — it requires being memorable."
-              </blockquote>
-
-              <p>
-                Searching for <strong>business website design near me</strong>?  
-                At Virtunest Solutions, we create high-performing, visually impressive, and conversion-focused websites that elevate your brand.
-              </p>
-
-              <h2 className="text-2xl font-bold mt-10">Ready for a Modern Redesign?</h2>
-              <p>
-                Whether you need a cleaner layout, faster performance, or a complete brand refresh —
-                our UI/UX designers and developers can transform your online presence.
-              </p>
-
-              {/* CTA Buttons */}
-              <div  className="pt-6 flex flex-wrap gap-6">
-                <a
-                href="/contact"
-                className="bg-blue-700 hover:bg-blue-800 text-white px-10 py-4 rounded-full font-semibold shadow-md hover:shadow-xl transition-all duration-300"
+              {/* Sections */}
+              {[
+                {
+                  title: "1. Not Mobile-Friendly",
+                  text: "More than 60% users browse on mobile. If your site isn’t responsive, you're losing traffic and ranking."
+                },
+                {
+                  title: "2. Slow Load Time",
+                  text: "Even a 2-second delay can drop conversions drastically. Speed directly impacts revenue."
+                },
+                {
+                  title: "3. Outdated Design",
+                  text: "Old UI makes your brand look unprofessional. Modern design builds instant trust."
+                },
+                {
+                  title: "4. Poor Navigation",
+                  text: "If users can’t find info quickly, they leave. Simple UX = more conversions."
+                },
+                {
+                  title: "5. Low Conversions",
+                  text: "Traffic without sales means design failure. A redesign fixes structure & CTAs."
+                }
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className="bg-white/5 border border-white/10 p-5 rounded-xl hover:bg-white/10 transition"
                 >
-                Contact Us
+                  <h2 className="text-xl font-semibold text-white mb-2">
+                    {item.title}
+                  </h2>
+                  <p>{item.text}</p>
+                </div>
+              ))}
+
+              {/* Quote */}
+              <div className="border border-blue-500/30 bg-blue-500/10 p-6 rounded-2xl italic text-blue-300">
+                "Success in {new Date().getFullYear()} is not about being online —
+                its about being unforgettable."
+              </div>
+
+              <p>
+                A high-performing website is the backbone of your business growth.
+                If your site isn’t converting — it’s time to upgrade.
+              </p>
+
+              {/* CTA */}
+              <div className="flex flex-wrap gap-5 pt-4">
+
+                <a
+                  href="/contact"
+                  className="bg-gradient-to-r from-blue-600 to-cyan-600 px-8 py-3 rounded-full font-semibold hover:scale-105 transition shadow-lg"
+                >
+                  🚀 Start Your Redesign
                 </a>
 
                 <a
-                href="/Blogs"
-                className="border border-blue-600 text-blue-700 hover:bg-blue-700 hover:text-white px-10 py-4 rounded-full font-semibold transition-all duration-300"
+                  href="/Blogs"
+                  className="border border-white/20 px-8 py-3 rounded-full hover:bg-white/10 transition"
                 >
-                ← Go Back
+                  ← Back to Blogs
                 </a>
 
               </div>
 
             </div>
+
           </div>
         </div>
       </section>

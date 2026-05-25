@@ -6,12 +6,11 @@ import Image from "next/image";
 import { FaCheckCircle } from "react-icons/fa";
 import { FaPeopleGroup } from "react-icons/fa6";
 
-// Image path from public folder
-const RightImg = "/website_Recuirment/Services.webp";
+const RightImg = "/website_Recuirment/Strategy.jpg";
 
 const OurProcess = () => {
   useEffect(() => {
-    AOS.init({ duration: 800, once: true });
+    AOS.init({ duration: 900, once: true });
   }, []);
 
   const steps = [
@@ -36,42 +35,50 @@ const OurProcess = () => {
   return (
     <section
       id="process"
-      className="py-16 px-6 md:px-12 lg:px-20 bg-linear-to-br from-blue-50 via-white to-blue-50"
+      className="relative overflow-hidden py-24 md:py-32 px-6 sm:px-10 lg:px-20 bg-gradient-to-b from-[#0b0f1a] via-[#0d1324] to-[#05070f]"
     >
-      <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12">
-        {/* Left Section */}
-        <div className="lg:w-1/2 text-left"
-        data-aos="fade-up">
-          <h2
-            className="relative inline-block text-3xl md:text-4xl lg:text-5xl font-inter font-bold capitalize leading-snug tracking-tight pb-2 text-blue-500"
-          >
-            Tailored Digital Strategies
-            <span className="absolute -bottom-2 left-0 w-16 md:w-40 h-[3px] bg-blue-500 rounded-full"></span>
+      {/* Background Glow Orbs */}
+      <div className="absolute top-[-120px] left-[-120px] w-[420px] h-[420px] bg-blue-600/20 blur-[160px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-[-150px] right-[-120px] w-[460px] h-[460px] bg-cyan-400/10 blur-[170px] rounded-full pointer-events-none" />
+
+      {/* Grid Pattern */}
+      <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(#fff_1px,transparent_1px),linear-gradient(90deg,#fff_1px,transparent_1px)] bg-[size:80px_80px]" />
+
+      <div className="relative max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-14 xl:gap-20">
+        {/* LEFT CONTENT */}
+        <div className="w-full lg:w-1/2" data-aos="fade-up">
+          <h2 className="text-white text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-extrabold leading-tight tracking-tight">
+            Tailored Digital
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 block mt-2">
+              Strategies & Process
+            </span>
           </h2>
 
-          <p className="pb-8 pt-5 text-gray-600 text-base md:text-lg">
+          <p className="mt-6 text-gray-400 text-base md:text-lg max-w-xl leading-relaxed font-light">
             Our expert team researches your audience, competition, and market
             trends to craft data-driven strategies that strengthen your brand
             identity and align perfectly with your business goals.
           </p>
 
-          {/* Steps Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {/* Steps */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-10">
             {steps.map((step, index) => (
               <div
                 key={index}
                 data-aos="zoom-in"
-                data-aos-delay={index * 150}
-                className="bg-white border border-blue-100 shadow-md p-5 rounded-xl hover:shadow-lg hover:-translate-y-1 transition duration-300"
+                data-aos-delay={index * 120}
+                className="group bg-white/5 border border-white/10 backdrop-blur-xl
+                rounded-2xl p-6 hover:border-cyan-400/50 hover:bg-white/10 hover:-translate-y-1
+                transition-all duration-300"
               >
                 <div className="flex items-center gap-3">
-                  <FaCheckCircle className="text-blue-500 text-lg" />
-                  <h3 className="text-lg md:text-xl font-semibold text-blue-700 font-poppins">
+                  <FaCheckCircle className="text-cyan-400 text-lg group-hover:scale-110 transition" />
+                  <h3 className="text-white text-lg font-semibold">
                     {step.title}
                   </h3>
                 </div>
 
-                <p className="text-gray-600 text-sm md:text-[14px] font-inter mt-2">
+                <p className="text-gray-400 text-sm mt-3 leading-relaxed font-light">
                   {step.desc}
                 </p>
               </div>
@@ -79,30 +86,40 @@ const OurProcess = () => {
           </div>
         </div>
 
-        {/* Right Image Section */}
+        {/* RIGHT IMAGE */}
         <div
-          className="relative lg:w-1/2 flex justify-center items-center"
+          className="relative w-full lg:w-1/2 flex justify-center"
           data-aos="zoom-in"
-          data-aos-delay="150"
         >
-          <div className="relative">
-            <Image
-              src={RightImg}
-              alt="Professional digital services and client process workflow."
-              width={600}
-              height={600}
-              priority={false}
-              className="h-72 w-72 md:h-[70vh] md:w-[70vw] lg:w-[28vw] lg:h-[65vh] rounded-full object-cover shadow-lg"
-            />
+          <div className="relative w-full max-w-lg">
+            {/* Glow behind image */}
+            <div className="absolute inset-0 bg-cyan-400/10 blur-[120px] rounded-full pointer-events-none" />
 
-            {/* Badge */}
-            <span className="absolute bottom-1 left-10 -translate-x-1/2 font-bold text-white bg-blue-500 px-4 py-3 rounded-lg flex flex-col items-center shadow-lg">
-              <span className="flex gap-2 items-center text-lg">
-                <FaPeopleGroup className="text-white text-2xl" />
-                96%
-              </span>
-              <span className="text-white text-sm">Successful clients</span>
-            </span>
+            <div className="relative h-[320px] sm:h-[400px] md:h-[450px] lg:h-[700px] w-full rounded-[32px] overflow-hidden border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+              <Image
+                src={RightImg}
+                alt="Digital strategy process"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+
+            {/* Success Rate Badge */}
+            <div className="absolute -bottom-8 -right-40 -translate-x-1/2
+            bg-[#0b0f1a]/80 backdrop-blur-xl border border-white/10
+            px-6 py-3.5 rounded-2xl flex items-center gap-4 shadow-2xl">
+              <FaPeopleGroup className="text-cyan-400 text-2xl" />
+              <div>
+                <p className="text-white font-extrabold text-xl leading-none">
+                  96%
+                </p>
+                <p className="text-gray-400 text-xs mt-1">
+                  Successful Clients
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

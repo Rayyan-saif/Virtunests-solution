@@ -1,135 +1,157 @@
-"use client"
+"use client";
 
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-// import blogImage from "../assets"; // Replace with your image path
 import Image from "next/image";
 
 const BlogFour = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
+    AOS.init({ duration: 900, once: true, easing: "ease-out-cubic" });
   }, []);
 
   return (
-    <section className="bg-white py-20 px-6 md:px-24">
-      <div className="max-w-5xl mx-auto" data-aos="fade-up">
-        {/* Title */}
-        <h1 className="text-4xl md:text-5xl font-bold text-black font-roboto pt-5 leading-snug text-center mb-4">
-        How Design + Marketing Together Boost Your Online Sales
-        </h1>
+    <section className="bg-gradient-to-b from-[#0a0f1c] via-[#0d1326] to-[#0a0f1c] text-white py-20 px-6 md:px-20">
+      
+      <div className="max-w-6xl mx-auto">
 
-        {/* Date + Author */}
-        <div className="flex items-center justify-center space-x-4 text-gray-700 text-sm mb-10">
-          <span>📅 July 15, 2024</span>
-          <span>•</span>
-          <span>✍️ By Virtunest Solutions</span>
+        {/* Header */}
+        <div className="text-center mb-16" data-aos="fade-up">
+          <h1 className="text-4xl mt-5 md:text-6xl font-extrabold leading-tight bg-gradient-to-r from-blue-400 to-cyan-300 text-transparent bg-clip-text">
+            Design + Marketing = <br /> Sales Growth
+          </h1>
+
+          <p className="text-gray-400 mt-4 text-sm md:text-base">
+            📅 July 15, 2024 • ✍️ Virtunest Solutions
+          </p>
         </div>
 
-        {/* Image */}
-        <div className="">
-        <div className="overflow-hidden mb-10 lg:w-[40vw] lg:mr-20">
+        {/* Featured Image */}
+        <div
+          className="relative w-full h-[55vh] md:h-[70vh] rounded-3xl overflow-hidden mb-16 shadow-2xl"
+          data-aos="zoom-in"
+        >
           <Image
             src="/website_Recuirment/blog04.jpg"
-            alt="UI-UX-Services"
-            width={900}
-            height={500}
-            className="rounded-3xl object-cover hover:scale-105 transition duration-500"
+            alt="Design and Marketing"
+            fill
+            className="object-cover"
           />
+
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]" />
         </div>
 
-        {/* Content */}
-       <div className="text-gray-800 text-lg leading-relaxed space-y-6 font-roboto text-balance lg:w-[60vw]">
+        {/* Content Container */}
+        <div
+          className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 md:p-14 space-y-12 shadow-xl"
+          data-aos="fade-up"
+        >
 
-  <p>
-    Design catches attention, but marketing creates direction. A visually appealing design can stop someone from scrolling, 
-    but it’s the power of marketing that convinces them to take action. When both work together, your brand becomes 
-    memorable, trusted, and truly unstoppable — creating a complete digital experience for your audience.
-  </p>
+          {/* Intro */}
+          <p className="text-gray-300 text-lg leading-relaxed">
+            Design grabs attention — but marketing turns that attention into action.  
+            When both work together, your brand becomes powerful, memorable, and conversion-driven.
+          </p>
 
-  <p>
-    <h2 className="font-semibold text-xl">Why Design Alone Isn’t Enough</h2>
-    Even the most outstanding design fails if no one sees it. A beautiful website, logo, or social media post needs the 
-    right visibility, the right message, and the right audience. Without marketing, great design becomes a hidden gem — 
-    present, but unnoticed. Today, brands need a balance of creativity and strategy to grow effectively.
-  </p>
+          {/* Grid Sections */}
+          <div className="grid md:grid-cols-2 gap-10">
 
-  <p>
-    <h2 className="font-semibold text-xl">Website Redesign Services</h2>
-    Your website is the digital face of your business. Our website redesign services focus on improving UI, speed, 
-    mobile responsiveness, SEO structure, and user flow. With a modern interface and optimized user journey, your 
-    website becomes more engaging, trustworthy, and conversion-ready. Whether you are rebranding or updating an old site, 
-    we help you create a fast, modern, and impactful digital presence.
-  </p>
+            <div className="space-y-3">
+              <h2 className="text-2xl font-bold text-blue-400">
+                Why Design Alone Isn’t Enough
+              </h2>
+              <p className="text-gray-300">
+                Even the best design fails if no one sees it. Without strategy,
+                visibility, and targeting — design becomes invisible.
+              </p>
+            </div>
 
-  <p>
-    <h2 className="font-semibold text-xl">How Marketing Supports Design</h2>
-    Marketing and design are not separate—marketing enhances design and design strengthens marketing. Together they:
-    <br />• Bring targeted traffic to the pages created by your design team
-    <br />• Promote visuals on platforms where your audience is most active
-    <br />• Use data and analytics to refine visuals for better engagement
-    <br />• Improve brand recognition through consistent messaging and aesthetics
-    <br /><br />
-    In short, design builds perception and marketing builds momentum.
-  </p>
+            <div className="space-y-3">
+              <h2 className="text-2xl font-bold text-blue-400">
+                Website Redesign Services
+              </h2>
+              <p className="text-gray-300">
+                We create modern, fast, and user-friendly websites that improve
+                UX, speed, SEO, and conversions — turning visitors into customers.
+              </p>
+            </div>
 
-  <p>
-    <h2 className="font-semibold text-xl">Social Media Marketing for Small Brands</h2>
-    Small businesses thrive when design and strategy combine. Our social media marketing services help your brand grow 
-    by pairing eye-catching visuals with powerful content strategies. From daily posts to paid ads, we ensure your 
-    brand not only looks good — but also performs well.
-    <br /><br />
-    <strong>Complete Online Presence for Small Business</strong> <br />
-    We help small businesses establish a strong and consistent online presence through:
-    <br />• Website development  
-    <br />• Social media content  
-    <br />• Paid ads  
-    <br />• Branding & design  
-    <br />• Marketing funnels  
-    <br />• Lead generation strategies  
-    <br />
-    When everything works as one system, your brand grows faster and smarter.
-  </p>
+          </div>
 
-  <blockquote className="border-l-4 border-blue-700 pl-4 italic text-blue-900 bg-blue-50 py-2 px-4 rounded-xl">
-    "Success in {new Date().getFullYear()} is no longer about simply being online — it's about being seen, trusted, and remembered."
-  </blockquote>
+          {/* Marketing Support */}
+          <div className="space-y-4">
+            <h2 className="text-3xl font-bold text-cyan-300">
+              How Marketing Powers Design
+            </h2>
 
-  <p>
-    <h2 className="font-semibold text-xl">UI/UX + Social Media Growth Package</h2>
-    If you want complete growth, our UI/UX + social media package brings both design and strategy together. From website 
-    layouts to Instagram content, from landing pages to ad creatives — everything is aligned to create a powerful brand 
-    identity that attracts, engages, and converts.
-    <br /><br />
-    Ready to grow with meaningful design and smart marketing? <strong>Start with us today and transform your brand into 
-    a digital powerhouse.</strong>
-  </p>
+            <ul className="grid md:grid-cols-2 gap-4 text-gray-300">
+              <li>✔ Drives targeted traffic</li>
+              <li>✔ Promotes your visuals</li>
+              <li>✔ Uses data for optimization</li>
+              <li>✔ Builds brand consistency</li>
+            </ul>
+          </div>
 
-  {/* CTA */}
-  <div  className="pt-6 flex flex-wrap gap-6">
-                <a
+          {/* Social Media Section */}
+          <div className="space-y-4">
+            <h2 className="text-3xl font-bold text-cyan-300">
+              Social Media Growth for Brands
+            </h2>
+
+            <p className="text-gray-300">
+              We combine eye-catching visuals with smart strategies to help
+              your brand grow across all platforms — from organic content to paid ads.
+            </p>
+
+            <div className="grid sm:grid-cols-2 gap-3 text-gray-400 text-sm">
+              <p>• Website Development</p>
+              <p>• Social Media Content</p>
+              <p>• Paid Advertising</p>
+              <p>• Branding & Design</p>
+              <p>• Funnels & Automation</p>
+              <p>• Lead Generation</p>
+            </div>
+          </div>
+
+          {/* Quote */}
+          <blockquote className="border-l-4 border-blue-500 bg-blue-500/10 p-6 rounded-xl italic text-blue-200 text-lg">
+            Success in {new Date().getFullYear()} isn’t about being online —
+            it’s about being remembered.
+          </blockquote>
+
+          {/* Final CTA Section */}
+          <div className="space-y-6">
+            <h2 className="text-2xl font-bold text-white">
+              Ready to Scale Your Brand?
+            </h2>
+
+            <p className="text-gray-400">
+              Combine powerful design with smart marketing strategies and
+              turn your business into a high-converting digital machine.
+            </p>
+
+            <div className="flex flex-wrap gap-5">
+              <a
                 href="/contact"
-                className="bg-blue-700 hover:bg-blue-800 text-white px-10 py-4 rounded-full font-semibold shadow-md hover:shadow-xl transition-all duration-300"
-                >
-                Contact Us
-                </a>
+                className="bg-gradient-to-r from-blue-500 to-cyan-400 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:scale-105 transition"
+              >
+                Start Now →
+              </a>
 
-                <a
+              <a
                 href="/Blogs"
-                className="border border-blue-600 text-blue-700 hover:bg-blue-700 hover:text-white px-10 py-4 rounded-full font-semibold transition-all duration-300"
-                >
-                ← Go Back
-                </a>
-
-              </div>
-
-    </div>
-
+                className="border border-white/20 px-8 py-3 rounded-full hover:bg-white hover:text-black transition"
+              >
+                ← Back to Blogs
+              </a>
+            </div>
+          </div>
 
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default BlogFour
+export default BlogFour;

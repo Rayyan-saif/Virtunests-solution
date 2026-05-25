@@ -1,100 +1,63 @@
 "use client";
 
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React from "react";
 import Image from "next/image";
 
-const Carts = ({ imgs, text, pragraph }) => {
-  useEffect(() => {
-    AOS.init({ duration: 800, once: true });
-  }, []);
+const Carts = ({ imgs, text, pragraph, delay }) => {
 
   return (
-    <>
-      {/* Mobile Version */}
+
+    <div
+      data-aos="fade-up"
+      data-aos-delay={delay}
+      className="group relative rounded-3xl border border-white/10 
+      bg-white/5 backdrop-blur-xl p-8 transition duration-500
+      hover:-translate-y-3 hover:border-cyan-400/40
+      hover:shadow-[0_0_40px_rgba(34,211,238,0.25)]"
+    >
+
+      {/* Icon */}
       <div
-        className="lg:hidden bg-blue-50 p-5 rounded-2xl shadow-sm flex flex-col items-center w-full"
-        data-aos="fade-up"
+        className="w-16 h-16 flex items-center justify-center 
+        rounded-2xl bg-white/10 mb-6
+        group-hover:bg-cyan-400/10 transition duration-300"
       >
-        <div className="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-full mb-3">
-          <Image
-            src={imgs}
-            width={60}
-            height={60}
-            alt={text}
-            className="object-contain"
-          />
-        </div>
 
-        <h1 className="text-lg font-bold font-roboto text-center mb-2 text-black">{text}</h1>
+        <Image
+          src={imgs}
+          alt={text}
+          width={40}
+          height={40}
+          className="object-contain"
+        />
 
-        <p className="text-gray-600 font-poppins text-xs text-center">{pragraph}</p>
-
-        <a href="/Packages">
-          <button className="text-blue-600 bg-blue-100 px-4 py-1 rounded-full text-xs mt-3">
-            Read More
-          </button>
-        </a>
       </div>
 
-      {/* Desktop Version */}
-      <div
-        className="hidden lg:flex group bg-blue-50 h-80 p-6 rounded-3xl shadow-md 
-        cursor-pointer flex-col w-72 transition-all duration-500 
-        hover:scale-105 hover:shadow-xl hover:bg-linear-to-br 
-        hover:from-blue-500 hover:to-blue-600 relative overflow-hidden"
-        data-aos="zoom-in"
-      >
-        {/* Hover glass */}
-        <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-10 transition duration-500 bg-white backdrop-blur-md"></div>
+      {/* Title */}
+      <h3 className="text-xl font-semibold text-white mb-3">
+        {text}
+      </h3>
 
-        {/* Icon */}
-        <div className="h-5/6 relative z-10">
-          <div
-            className="w-16 h-16 flex items-center justify-center 
-            bg-blue-100 rounded-full group-hover:bg-white transition duration-300"
-          >
-            <Image
-              src={imgs}
-              width={60}
-              height={60}
-              alt={text}
-              className="object-contain"
-            />
-          </div>
+      {/* Description */}
+      <p className="text-gray-300 text-sm leading-relaxed mb-6">
+        {pragraph}
+      </p>
 
-          {/* Title */}
-          <h1
-            className="text-2xl font-bold mt-3 mb-2 font-roboto text-left 
-          group-hover:text-white transition-colors duration-300"
-          >
-            {text}
-          </h1>
+      {/* Button */}
+      <a href="/Packages">
 
-          {/* Paragraph */}
-          <p
-            className="text-gray-700 font-poppins text-sm capitalize 
-          group-hover:text-white pb-4 transition-colors duration-300"
-          >
-            {pragraph}
-          </p>
-        </div>
+        <button
+          className="text-sm font-medium text-cyan-400 
+          border border-cyan-400/30 px-4 py-2 rounded-full
+          hover:bg-cyan-400 hover:text-black transition"
+        >
+          Learn More
+        </button>
 
-        {/* Button */}
-        <div className="mt-auto relative z-10 flex justify-end">
-          <a href="/Packeges">
-            <button
-              className="text-blue-600 bg-blue-100 px-4 py-2 rounded-full 
-              transition-all duration-300 group-hover:text-white 
-              group-hover:bg-white/20 text-sm"
-            >
-              Read More
-            </button>
-          </a>
-        </div>
-      </div>
-    </>
+      </a>
+
+    </div>
+
   );
 };
 
